@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.login.LoginFragment">
+
+    <ImageView
+        android:id="@+id/iv_book"
+        android:layout_width="@dimen/ilustrasi"
+        android:layout_height="@dimen/ilustrasi"
+        android:layout_marginTop="@dimen/size_large"
+        android:alpha="0"
+        android:src="@drawable/ncs_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:alpha="100" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:alpha="0"
+        tools:alpha="100"
+        android:id="@+id/textInputLayoutUsername"
+        style="@android:style/TextAppearance.Widget.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_super"
+        android:layout_marginHorizontal="@dimen/space_jumbo"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red_error"
+        app:layout_constraintTop_toBottomOf="@+id/iv_book"
+        tools:layout_editor_absoluteX="26dp">
+
+        <com.grasepta.storyapp.base.customview.CustomEditText
+            android:alpha="0"
+            tools:alpha="100"
+            android:id="@+id/ed_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_jumbo"
+            android:gravity="center|start"
+            android:hint="Username"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:text="grasepta@gmail.com"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:alpha="0"
+        tools:alpha="100"
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        android:hint="Kata Sandi"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:errorTextColor="@color/red_error"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutUsername"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutUsername"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUsername"
+        style="@android:style/TextAppearance.Widget.EditText"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
+
+        <com.grasepta.storyapp.base.customview.CustomEditText
+            android:alpha="0"
+            tools:alpha="100"
+            android:id="@+id/ed_login_password"
+            style="@android:style/TextAppearance.Widget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_jumbo"
+            android:text="12345678"
+            android:imeOptions="actionDone"
+            android:gravity="center|start"
+            android:inputType="textPassword"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        android:alpha="0"
+        android:text="@string/doesn_t_have_an_accoount_register_here"
+        android:textColor="@color/secondary_text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
+        tools:alpha="100" />
+
+    <Button
+        android:alpha="0"
+        tools:alpha="100"
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_xxxjumbo"
+        android:background="@drawable/btn_background"
+        android:text="Login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutPassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

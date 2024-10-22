@@ -7,7 +7,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.grasepta.storyapp.core.MainActivity
+import com.grasepta.storyapp.MainActivity
 import com.grasepta.storyapp.base.helper.EndlessRecyclerViewScrollListener
 import com.grasepta.storyapp.base.helper.WrapContentLinearLayoutManager
 import com.grasepta.storyapp.base.helper.initRecycleView

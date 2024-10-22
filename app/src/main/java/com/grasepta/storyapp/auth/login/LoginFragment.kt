@@ -5,7 +5,7 @@ import android.animation.ObjectAnimator
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
-import com.grasepta.storyapp.core.MainActivity
+import com.grasepta.storyapp.MainActivity
 import com.grasepta.storyapp.base.helper.getTexts
 import com.grasepta.storyapp.base.helper.observe
 import com.grasepta.storyapp.databinding.FragmentLoginBinding

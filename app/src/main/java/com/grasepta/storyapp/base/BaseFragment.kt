@@ -127,7 +127,7 @@ abstract class BaseFragment<out VB: ViewBinding>(private val inflate: Inflate<VB
     fun String.forceLogout() = displayMessage(this, "Login", R.drawable.img_fail) {
         requireActivity().startActivity(
             Intent().setClassName(
-            requireActivity().packageName, "com.grasepta.storyapp.core.MainActivity"
+            requireActivity().packageName, "com.grasepta.storyapp.MainActivity"
         ).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
         })

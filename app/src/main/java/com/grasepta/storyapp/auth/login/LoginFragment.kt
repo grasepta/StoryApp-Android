@@ -5,7 +5,7 @@ import android.animation.ObjectAnimator
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
-import com.grasepta.storyapp.core.MainActivity
+import com.grasepta.storyapp.MainActivity
 import com.grasepta.storyapp.base.helper.getTexts
 import com.grasepta.storyapp.base.helper.observe
 import com.grasepta.storyapp.databinding.FragmentLoginBinding
@@ -22,13 +22,13 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 
         bind.edLoginEmail.apply {
             setTextInputLayout(bind.textInputLayoutUsername)
-            setMaxLength(20)
+            setMaxLength(60)
             maxLines = 1
         }
 
         bind.edLoginPassword.apply {
             setTextInputLayout(bind.textInputLayoutPassword)
-            setMaxLength(20)
+            setMaxLength(32)
             setMinLength(8)
             maxLines = 1
         }

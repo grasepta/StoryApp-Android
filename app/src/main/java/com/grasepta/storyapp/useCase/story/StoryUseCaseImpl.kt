@@ -1,5 +1,7 @@
 package com.grasepta.storyapp.useCase.story
 
+import androidx.lifecycle.LiveData
+import androidx.paging.PagingData
 import com.grasepta.storyapp.base.wrapper.ConsumeResultDomain
 import com.grasepta.storyapp.core.data.repository.story.StoryRepository
 import com.grasepta.storyapp.core.data.response.AddNewStoryRes
@@ -10,12 +12,12 @@ import okhttp3.RequestBody
 import javax.inject.Inject
 
 class StoryUseCaseImpl @Inject constructor(private val repo: StoryRepository) : StoryUseCase {
-    override fun getAllStories(
-        page: Int?,
-        size: Int?,
-        location: Int?
-    ): Flow<ConsumeResultDomain<List<ListStory>>> {
-        return repo.getAllStories(page = page ,size = size, location = location)
+    override fun getAllStories(): LiveData<PagingData<ListStory>> {
+        return repo.getAllStories()
+    }
+
+    override fun getAllStoriesWithLocation(): LiveData<PagingData<ListStory>> {
+        return repo.getAllStoriesWithLocation()
     }
 
     override fun addNewStory(

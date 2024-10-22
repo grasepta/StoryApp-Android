@@ -1,0 +1,24 @@
+package com.grasepta.storyapp.utils
+
+import com.grasepta.storyapp.core.data.response.ListStory
+
+
+object DataDummy {
+ 
+    fun generateStoryResponse(): List<ListStory> {
+        val items: MutableList<ListStory> = arrayListOf()
+        for (i in 0..100) {
+            val quote = ListStory(
+                i.toString(),
+                "name + $i",
+                "desc $i",
+                "photo $i",
+                "created At $i",
+                i.toDouble(),
+                i.toDouble(),
+            )
+            items.add(quote)
+        }
+        return items
+    }
+}
